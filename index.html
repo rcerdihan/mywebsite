@@ -1,121 +1,205 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Regaip Cuma Erdihan</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Genel Sayfa Ayarları */
+        body {
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            background: linear-gradient(135deg, #f0b52b 0%, #e6a300 100%); /* Hafif gradyan geçiş */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
 
-<html>
-    <head>
-        <title>About Me</title>
-        
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f0b52b;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-            }
+        /* Ana Kutu Tasarımı */
+        .container {
+            background-color: #ffffff; /* Okunabilirlik için beyaz zemin */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Derinlik hissi veren gölge */
+            width: 100%;
+            max-width: 800px; /* Çok geniş ekranlarda yayılmasını engeller */
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease-in-out; /* Sayfa açılış animasyonu */
+        }
 
+        /* Başlıklar */
+        h1 {
+            color: #2C3E50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #f0b52b;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Metin Alanı ve Resim Düzeni */
+        .text {
+            font-size: 16px;
+            line-height: 1.8; /* Okuması daha rahat satır aralığı */
+            color: #555;
+            text-align: left; 
+            overflow: hidden; /* Float temizliği için */
+        }
+
+        .text p {
+            margin-bottom: 20px;
+        }
+
+        /* Profil Resmi */
+        img {
+            width: 180px; /* Sabit ve ideal boyut */
+            height: 180px;
+            object-fit: cover; /* Resim oranını koruyarak kırpar */
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02); /* Üzerine gelince hafif büyüme */
+        }
+
+        /* Ara Başlıklar */
+        .title {
+            color: #2C3E50;
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            clear: both;
+            display: block;
+        }
+
+        /* Oyun Alanı Başlığı */
+        .game-section-title {
+            color: #2C3E50;
+            font-size: 20px;
+            margin-top: 40px;
+            font-weight: 600;
+        }
+
+        /* Buton Tasarımı */
+        .play-button {
+            background-color: #2C3E50; /* Koyu lacivert (Sarı ile uyumlu) */
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px; /* Hap şeklinde buton */
+            cursor: pointer;
+            text-align: center;
+            margin-top: 25px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+        }
+
+        .play-button:hover {
+            background-color: #f0b52b; /* Hover'da temanın ana rengine dönüş */
+            color: #2C3E50;
+            transform: translateY(-3px); /* Yukarı doğru hafif hareket */
+            box-shadow: 0 6px 20px rgba(240, 181, 43, 0.4);
+        }
+
+        /* Alt Bilgi (Footer) */
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .footer a {
+            color: #f0b52b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Animasyon Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobil Uyumluluk (Media Queries) */
+        @media (max-width: 768px) {
             .container {
-                background-color: rgb(245, 216, 111);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 70%;
-                border-radius: 8px;
-                padding: 20px;
-                text-align: center;
-                color: #333;
-            }
-
-            h1 {
-                color: black;
-                font-size: 36px;
-                margin-bottom: 20px;
-            }
-
-            .text {
-                font-size: 18px;
-                line-height: 2.5;
-                margin-bottom: 20px;
-                color: #000000;
-                text-align: left; 
-                overflow: auto;
+                width: 90%;
+                padding: 25px;
             }
 
             img {
-                width: 25%;
-                height: auto;
-                float: left;
-                margin-right: 25px;
-                margin-bottom: 15px;
-                border-radius: 5px;
+                float: none;
+                display: block;
+                margin: 0 auto 20px auto; /* Resmi ortala */
+                width: 150px;
+                height: 150px;
             }
 
-            .title {
-                color: #2C3E50;
+            .text {
+                text-align: center; /* Mobilde metni ortala */
+            }
+            
+            h1 {
                 font-size: 28px;
-                margin-top: 20px;
-                clear: both;
             }
+        }
+    </style>
+</head>
 
-            .play-button {
-                background-color: #4A90E2;
-                color: white;
-                font-size: 18px;
-                padding: 15px 30px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                text-align: center;
-                margin-top: 20px;
-                display: inline-block;
-                text-decoration: none;
-                width: 200px;
-            }
+<body onload="WelcomeFunction()">
+    <div class="container">
+        <h1>Who Am I?</h1>
+        
+        <div class="text">
+            <img src="erdihan.jpeg" alt="Regaip Cuma Erdihan">
 
-            .play-button:hover {
-                background-color: #357ABD;
-            }
+            <p>Hello everyone, I am <strong>Regaip Cuma Erdihan</strong>. Let me introduce myself briefly. I was born in Kahramanmaraş in 2005. I spent my entire life in Kahramanmaraş until university. Now I live in Istanbul. I am studying in the <strong>Computer Engineering Department at Istanbul Technical University</strong> which is the best in Turkiye. I also leave a picture here in case you are wondering who I am.</p>
 
-            .footer {
-                margin-top: 30px;
-                font-size: 14px;
-                color: #888;
-            }
-        </style>
-    </head>
-
-    <body onload="WelcomeFunction()">
-        <div class="container">
-            <h1><strong>Who Am I?</strong></h1>
+            <p class="title">About Future</p>
             
-            <div class="text">
-                <img src="erdihan.jpeg" alt="Regaip Cuma Erdihan">
-
-                <p>Hello everyone, I am Regaip Cuma Erdihan. Let me introduce myself briefly. I was born in Kahramanmaraş in 2005. I spent my entire life in Kahramanmaraş until university. Now I live in Istanbul. I am studying in the Computer Engineering Department at Istanbul Technical University which is the best in Turkiye. I also leave a picture here in case you are wondering who I am.</p>
-
-                <p class="title"><strong>About Future</strong></p>
-                
-                <p>In fact, although I am someone who plans and dreams a lot about the future, I am still undecided about what I want to do in the future. The only thing I know now is that I want to be a computer engineer and I really aim to be a good engineer in my field. The reason why I am undecided is that I want to work in a sector such as the defense industry, which is a very serious job, and I also want to work in a big game company because of my hobbies. I know how unrelated these two industries are, but I guess my future opportunities and evolving mindset will decide that.</p>
-
-                <p>In short, my biggest goal in life is to be one of the people who do their job best, no matter what I do.</p>
-            </div>
+            <p>In fact, although I am someone who plans and dreams a lot about the future, I am still undecided about what I want to do. The only thing I know now is that I want to be a computer engineer and I really aim to be a good engineer in my field.</p> 
             
-            <p><strong>Do You Want to Play a Game With Me?</strong></p>
-            <p>If you are good with word games, I have a great game for you, how about playing it?</p>
+            <p>The reason why I am undecided is that I want to work in a sector such as the <strong>defense industry</strong>, which is a very serious job, and I also want to work in a <strong>big game company</strong> because of my hobbies. I know how unrelated these two industries are, but I guess my future opportunities and evolving mindset will decide that.</p>
 
-            
-            <a href="game/game.html" class="play-button">Play Game</a>
-
-            <div class="footer">
-                <p>Created by Regaip Cuma Erdihan</p>
-                <p>Contact: <a href="mailto:erdihan23@itu.edu.tr">erdihan23@itu.edu.tr</a></p>
-            </div>
+            <p>In short, my biggest goal in life is to be one of the people who do their job best, no matter what I do.</p>
         </div>
+        
+        <p class="game-section-title">Do You Want to Play a Game With Me?</p>
+        <p style="color: #666; margin-bottom: 5px;">If you are good with word games, I have a great game for you.</p>
 
-        <script>
-            function WelcomeFunction() {
-            }
-        </script>
-    </body>
+        <a href="game/game.html" class="play-button">Start Game</a>
+
+        <div class="footer">
+            <p>Created by Regaip Cuma Erdihan &copy; 2025</p>
+            <p>Contact: <a href="mailto:erdihan23@itu.edu.tr">erdihan23@itu.edu.tr</a></p>
+            <p>Github: <a href="https://github.com/itu-itis24-erdihan23">Github</a></p>
+            <p>Linkedln: <a href="https://www.linkedin.com/in/regaip-cuma-erdihan-b6326838a">Linkedln</a></p>
+        </div>
+    </div>
+
+    <script>
+        function WelcomeFunction() {
+            console.log("Welcome to my profile!");
+        }
+    </script>
+</body>
 </html>
