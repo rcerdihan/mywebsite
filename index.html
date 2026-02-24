@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Genel Sayfa Ayarları */
+       
         body {
-            font-family: 'Poppins', sans-serif; /* Modern font */
-            background: linear-gradient(135deg, #f0b52b 0%, #e6a300 100%); /* Hafif gradyan geçiş */
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #f0b52b 0%, #e6a300 100%); 
             margin: 0;
             padding: 20px;
             display: flex;
@@ -21,20 +21,20 @@
             color: #333;
         }
 
-        /* Ana Kutu Tasarımı */
+        
         .container {
-            background-color: #ffffff; /* Okunabilirlik için beyaz zemin */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Derinlik hissi veren gölge */
+            background-color: #ffffff; 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
             width: 100%;
-            max-width: 800px; /* Çok geniş ekranlarda yayılmasını engeller */
+            max-width: 800px; 
             border-radius: 16px;
             padding: 40px;
             text-align: center;
             transition: transform 0.3s ease;
-            animation: fadeIn 1s ease-in-out; /* Sayfa açılış animasyonu */
+            animation: fadeIn 1s ease-in-out; 
         }
 
-        /* Başlıklar */
+       
         h1 {
             color: #2C3E50;
             font-size: 32px;
@@ -44,24 +44,24 @@
             padding-bottom: 10px;
         }
 
-        /* Metin Alanı ve Resim Düzeni */
+        
         .text {
             font-size: 16px;
-            line-height: 1.8; /* Okuması daha rahat satır aralığı */
+            line-height: 1.8;
             color: #555;
             text-align: left; 
-            overflow: hidden; /* Float temizliği için */
+            overflow: hidden; 
         }
 
         .text p {
             margin-bottom: 20px;
         }
 
-        /* Profil Resmi */
+       
         img {
-            width: 180px; /* Sabit ve ideal boyut */
+            width: 180px;
             height: 180px;
-            object-fit: cover; /* Resim oranını koruyarak kırpar */
+            object-fit: cover; 
             float: left;
             margin-right: 30px;
             margin-bottom: 10px;
@@ -71,10 +71,10 @@
         }
 
         img:hover {
-            transform: scale(1.02); /* Üzerine gelince hafif büyüme */
+            transform: scale(1.02); 
         }
 
-        /* Ara Başlıklar */
+        
         .title {
             color: #2C3E50;
             font-size: 24px;
@@ -85,7 +85,7 @@
             display: block;
         }
 
-        /* Oyun Alanı Başlığı */
+        
         .game-section-title {
             color: #2C3E50;
             font-size: 20px;
@@ -93,15 +93,15 @@
             font-weight: 600;
         }
 
-        /* Buton Tasarımı */
+        
         .play-button {
-            background-color: #2C3E50; /* Koyu lacivert (Sarı ile uyumlu) */
+            background-color: #2C3E50; 
             color: white;
             font-size: 16px;
             font-weight: 600;
             padding: 16px 40px;
             border: none;
-            border-radius: 50px; /* Hap şeklinde buton */
+            border-radius: 50px; 
             cursor: pointer;
             text-align: center;
             margin-top: 25px;
@@ -112,13 +112,13 @@
         }
 
         .play-button:hover {
-            background-color: #f0b52b; /* Hover'da temanın ana rengine dönüş */
+            background-color: #f0b52b; 
             color: #2C3E50;
-            transform: translateY(-3px); /* Yukarı doğru hafif hareket */
+            transform: translateY(-3px); 
             box-shadow: 0 6px 20px rgba(240, 181, 43, 0.4);
         }
 
-        /* Alt Bilgi (Footer) */
+        
         .footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -133,13 +133,13 @@
             font-weight: 600;
         }
 
-        /* Animasyon Keyframes */
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Mobil Uyumluluk (Media Queries) */
+        
         @media (max-width: 768px) {
             .container {
                 width: 90%;
@@ -149,13 +149,13 @@
             img {
                 float: none;
                 display: block;
-                margin: 0 auto 20px auto; /* Resmi ortala */
+                margin: 0 auto 20px auto; 
                 width: 150px;
                 height: 150px;
             }
 
             .text {
-                text-align: center; /* Mobilde metni ortala */
+                text-align: center; 
             }
             
             h1 {
